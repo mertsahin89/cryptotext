@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+        <title>
+            3d rotate
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id = "preloader"></div>
+        <div id="parent" class="parentClass">
+            <div  id="3dAnimatedId" class="animationClass">
+                <div class="animation">
+                    <img onclick="window.open('html.html','_blank')"src="images/front.png" alt="front">
+                </div>
+                <div class="animation">
+                    <img onclick="window.open('html.html','_blank')" src="images/back.png" alt="back">
+                </div>
+            </div>
+        </div>
+        
+        <script>
+		
+            var loader = document.getElementById("preloader");
+            var images = document.getElementById("3dAnimatedId");
+            var counter = 0;
+            window.addEventListener("load", function(){
+                if(counter<54){
+                    setTimeout(() => {
+                    loader.style.display = "none";
+                    images.style.display="flex";
+                    }, (54-counter)*100);
+                }
+                else{
+                    loader.style.display = "none";
+                    images.style.display="flex";
+                }
+            })
+        </script>
+    </body>
+</html>
